@@ -20,6 +20,24 @@
             margin-right: 10px;
             text-decoration: none;
         }
+        .imgDiv{
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 30px;
+            margin-right: 30px;
+            
+        }
+        .imgDiv img{
+            width: 100%;
+            border-radius:30px 30px 0 0 /* sol üst sağ üst sağ alt sol alt*/
+        }
+        .imgDiv h3{
+            text-align: center;
+        }
+        .imgDiv p{
+            padding: 0 20px;
+        }
+
         
     </style>
 </head>
@@ -37,12 +55,45 @@
     </div>
 
     <div style="background-image: url('banner.jpg') ; 
-    height: 400px; position: relative;">
+    height: 400px; position: relative;  margin-bottom: 30px;">
         <div style="text-align: center;position: absolute;
                 top: 30px;left: 0px;right: 0px;">
             <h1>Efsane Banner</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas quia, distinctio nihil hic aperiam ipsam vitae alias harum praesentium veniam earum odit velit iusto tempora facilis. Praesentium mollitia aspernatur voluptatibus?</p>
         </div>
+    </div>
+
+    <div style="display:flex ; justify-content: center;">
+        <div class="imgDiv">
+            <img class="efs"  src="1.jpg" alt="">
+            <h3>Efsane Resim</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
+            </p>
+        </div>
+    
+        <div class="imgDiv">
+            <img class="efs"  src="2.jpg" alt="">
+            <h3>Efsane Resim</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
+            </p>
+        </div>
+        <div class="imgDiv">
+            <img class="efs"  src="3.jpg" alt="">
+            <h3>Efsane Resim</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
+            </p>
+        </div>
+        <div class="imgDiv">
+            <img class="efs"  src="4.jpg" alt="">
+            <h3>Efsane Resim</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
+            </p>
+        </div>
+    
     </div>
 
 </body>
