@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         .header {
             display: flex;
             justify-content: space-between;
@@ -32,12 +35,25 @@
         .headerlink {
             margin-right: 10px;
             text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+        .imgmaindiv{
+                display:flex ; 
+                justify-content: center;
+                margin: 30px 0;
+                flex-wrap: wrap;
+            }
+        .imgResDiv{
+            flex: 25%;
         }
         .imgDiv{
-            width: 200px;
-            border: 1px solid black;
+            /* width: 200px; */
+            border: 1px dashed black;
             border-radius: 30px;
-            margin-right: 30px;
+            /* margin-right: 30px; */
+            /* flex:25% ; */
+            margin: 20px;
             
         }
         .imgDiv img{
@@ -46,59 +62,63 @@
         }
         .imgDiv h3{
             text-align: center;
+            color: red;
         }
         .imgDiv p{
             padding: 0 20px;
+            text-align: center;
         }
-        .formelement{
-            width: 100%;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 8px 0px;
-            box-sizing: border-box;
-            border: 1px solid red;
+        .imgDiv .pricePurchaseDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
         }
-
-
-        .btnsubmit {
-            width: 100%;
-            padding: 13px 0px;
-            background-color: lightgreen;
+        .imgDiv .price{
+            font-size: 28px;
+            color: red;
+        }
+        .imgDiv .purchase{
+            padding: 15px 10px;
+            border-radius: 30px;
             border: none;
-            color: white;
-            margin-top: 20px;
-        }
-
-        .formelement:focus {
-            background-color: aquamarine;
-        }
-
-        .formelement:hover {
-            background-color: red;
-        }
-
-        .formgeneral{
-            background-color:rgb(51, 138, 167);
-            margin: 150px 0px;
-            padding: 20px;
-            margin: 10px 278px;
+            background-color: green;
+            width: 100px;
         }
         .footer{
             display: flex;
-            background-color: chocolate;
-            height: 50px;
-            text-align: center;
+            background-color:lightcoral;
+            height: 150px;
+            text-align: left;
             align-items: center; /*dikey olaraj hizaladık ortaladık*/
-            justify-content: center;/*yatay olarak hizaladık*/
+            justify-content: space-around;/*yatay olarak hizaladık*/
+            margin-top: 30px;
+            
         }
-        .imgmaindiv{
-                display:flex ; 
-                justify-content: center;"
-            }
+        .footer .footerlist{
+            list-style-type: none;
+        }
+        .footerlist li{
+            margin-top: 10px;
+        }
+        .footerlist a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
         .mobilicon{
             display: none;
         }
+        @media only screen and (max-width: 900px){
+            .imgResDiv{
+                flex: 50%;
+            }
+        }
+
         @media only screen and (max-width: 600px){
+            .imgResDiv{
+                flex: 100%;
+            }
             .mobilicon{
             display: block;
             }
@@ -121,18 +141,24 @@
                 flex-direction: column;
             }         
             .imgDiv{
-                width: 100%;
+                /* width: 100%; */
                 margin-bottom: 30px;
             }
-            .formgeneral{
-                box-sizing: border-box;
-                width: 100%;
-                margin: 0px;
+            .footer{
+                flex-direction: column;
+                height: auto;
+            }
+            .footerlist{
+                display: flex;
+                padding: 0;
+
+            }
+            .footerlist li{
+                margin-right: 10px;
             }
         }
 
-        
-
+       
     </style>
 </head>
 
@@ -143,7 +169,7 @@
         </div>
        
         <div>
-            <img class="headerimg" src="1.jpg" width="32px" height="32px" alt="">
+            <img class="headerimg" src="burgerlogo.png" height="50px" alt="">
         </div>
        <div id="navDiv" class="mobillinkdisplay">
         <div class="mobillink">
@@ -162,57 +188,114 @@
     </div>
 
     <div class="imgmaindiv">
-        <div class="imgDiv">
-            <img class="efs"  src="1.jpg" alt="">
-            <h3>Efsane Resim</h3>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
-            </p>
-        </div>
-    
-        <div class="imgDiv">
-            <img class="efs"  src="2.jpg" alt="">
-            <h3>Efsane Resim</h3>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
-            </p>
-        </div>
-        <div class="imgDiv">
-            <img class="efs"  src="3.jpg" alt="">
-            <h3>Efsane Resim</h3>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
-            </p>
-        </div>
-        <div class="imgDiv">
-            <img class="efs"  src="4.jpg" alt="">
-            <h3>Efsane Resim</h3>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, molestias id quibusdam molestiae aperiam magnam ducimus veritatis neque aliquid deleniti aspernatur iusto! Id recusandae, nulla commodi cumque nemo doloremque dignissimos?
-            </p>
-        </div>
-    
+        <div class="imgResDiv">
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>    
+        <div class="imgResDiv">
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>   
+        <div class="imgResDiv">
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>   
+        <div class="imgResDiv">
+
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <div class="imgmaindiv">
+        <div class="imgResDiv">
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>    
+        <div class="imgResDiv">
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>   
+        <div class="imgResDiv">
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>   
+        <div class="imgResDiv">
+
+            <div class="imgDiv">
+                <img class="efs"  src="burger.jpg" alt="">
+                <h3>Kasap Burger</h3>
+                <p>Bol Malzemeli Efsane Burger</p>
+                <div class="pricePurchaseDiv">
+                    <p class="price">45.99 <i>TL</i></p>
+                    <button class="purchase">SATIN AL</button>
+                </div>
+            </div>
+        </div>       
     </div>
 
-    <form class="formgeneral">
-        <label>Ad</label>
-        <input  class="formelement" type="text" name="Firstname : " placeholder="Adınızı Giriniz">
-
-        <label>Soyad</label>
-        <input class="formelement" type="text" name="Lastname : " placeholder="Soyadınızı Giriniz">
-        
-        <label for="country"></label>
-        <select class="formelement" name="country" id="">
-            <option value="tr">Türkiye</option>
-            <option value="fr">France</option>
-            <option value="en">England</option>
-        </select>
-        <input class="btnsubmit" type="submit" value="Kaydet">
-    </form>
-
     <div class="footer">
-        <h3>Frontend && Tüm hakları saklıdır.</h3>
+        <ul class="footerlist">
+            <li><a href="">Anasayfa</a></li>
+            <li><a href="">Hakkımızda</a></li>
+            <li><a href="">İletişim</a></li>
+        </ul>
 
+        <img src="burgerlogo.png" height="80px">
+
+        <ul class="footerlist">
+            <li><a href="">Burgerler</a></li>
+            <li><a href="">Restoranlar</a></li>
+            <li><a href="">Kariyer</a></li>
+        </ul>
     </div>
 
     <script>
